@@ -1,0 +1,34 @@
+{
+  "name": "testcafe_testing",
+  "version": "1.0.0",
+  "description": "Automation testing with testcafe",
+  "main": "index.js",
+  "scripts": {
+    "todoistPageAccess": "testcafe \"chrome --start-maximized\" pom/tests/Tasks/TodoistPageAccess.js --page-load-timeout 20000 --selector-timeout 20000 --assertion-timeout 20000",
+    "todoistInvalidLoginWithoutCredentials": "testcafe \"chrome --start-maximized\" pom/tests/LoginNegativeTests/TodoistInvalidLoginWithoutCredentials.js --page-load-timeout 20000 --selector-timeout 20000 --assertion-timeout 20000",
+    "todoistInvalidLoginWithoutPassword": "testcafe \"chrome --start-maximized\" pom/tests/LoginNegativeTests/TodoistInvalidLoginWithoutPassword.js --page-load-timeout 20000 --selector-timeout 20000 --assertion-timeout 20000",
+    "todoistInvalidLoginWrongPassword": "testcafe \"chrome --start-maximized\" pom/tests/LoginNegativeTests/TodoistInvalidLoginWrongPassword.js --page-load-timeout 20000 --selector-timeout 20000 --assertion-timeout 20000",
+    "todoistValidCredentials": "testcafe \"chrome --start-maximized\" pom/tests/LoginPositiveTests/TodoistValidCredentials.js --page-load-timeout 20000 --selector-timeout 20000 --assertion-timeout 20000",
+    "todoistProjectFavorito": "testcafe \"chrome --start-maximized\" pom/tests/TodoistProjects/TodoistProjectFavorito.js --page-load-timeout 20000 --selector-timeout 20000 --assertion-timeout 20000",
+    "pageAccess": "testcafe \"chrome --start-maximized\" pom/tests/PageAccess.js --page-load-timeout 20000 --selector-timeout 20000 --assertion-timeout 20000",
+    "invalidLoginWithoutCredentials": "testcafe \"chrome --start-maximized\" pom/tests/InvalidLoginWithoutCredentials.js --page-load-timeout 20000 --selector-timeout 20000 --assertion-timeout 20000",
+    "invalidLoginWithoutPassword": "testcafe \"chrome --start-maximized\" pom/tests/InvalidLoginWithoutPassword.js --page-load-timeout 20000 --selector-timeout 20000 --assertion-timeout 20000",
+    "invalidLoginWrongPassword": "testcafe \"chrome --start-maximized\" pom/tests/InvalidLoginWrongPassword.js --page-load-timeout 20000 --selector-timeout 20000 --assertion-timeout 20000",
+    "validCredentials": "testcafe \"chrome --start-maximized\" pom/tests/ValidCredentials.js --page-load-timeout 20000 --selector-timeout 20000 --assertion-timeout 20000",
+    "test:reports": "testcafe chrome pom/tests/*.js --skips-js-errors --reporter html:reports/htmlReports/POMReports.html"
+  },
+  "keywords": [
+    "testcafe",
+    "testing",
+    "automation"
+  ],
+  "author": "Linda Garibay",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "prettier": "^2.6.2",
+    "testcafe": "^1.20.1",
+    "testcafe-reporter-html": "^1.4.6",
+    "xpath-to-css": "^1.1.0"
+  }
+}
